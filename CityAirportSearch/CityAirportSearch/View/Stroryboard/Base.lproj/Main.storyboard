@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search City View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SearchCityViewController" id="BYZ-38-t0r" customClass="SearchCityViewController" customModule="CityAirportSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VhU-99-vXf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="150"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ley-bg-kR8">
+                                        <rect key="frame" x="15" y="50" width="384" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="9ld-6M-LNp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ley-bg-kR8" firstAttribute="top" secondItem="VhU-99-vXf" secondAttribute="top" constant="50" id="9pT-Zj-RnG"/>
+                                    <constraint firstItem="ley-bg-kR8" firstAttribute="leading" secondItem="VhU-99-vXf" secondAttribute="leading" constant="15" id="F6x-1C-7AA"/>
+                                    <constraint firstAttribute="trailing" secondItem="ley-bg-kR8" secondAttribute="trailing" constant="15" id="J0S-g5-Mfp"/>
+                                    <constraint firstAttribute="height" constant="150" id="Q8C-46-kcC"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zrM-NL-AyQ">
+                                <rect key="frame" x="0.0" y="202" width="414" height="660"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zrM-NL-AyQ" secondAttribute="trailing" id="0Ve-TI-azL"/>
+                            <constraint firstItem="VhU-99-vXf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4NC-XM-zfd"/>
+                            <constraint firstItem="zrM-NL-AyQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c93-lr-mR2"/>
+                            <constraint firstItem="zrM-NL-AyQ" firstAttribute="top" secondItem="VhU-99-vXf" secondAttribute="bottom" constant="8" id="he9-FU-Eks"/>
+                            <constraint firstItem="VhU-99-vXf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mhP-oX-udh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VhU-99-vXf" secondAttribute="trailing" id="wNf-bP-9DG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zrM-NL-AyQ" secondAttribute="bottom" id="wXv-YI-jrg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="roundedView" destination="VhU-99-vXf" id="nMu-ig-boA"/>
+                        <outlet property="searchTextField" destination="ley-bg-kR8" id="Neb-l6-5jV"/>
+                        <outlet property="tableview" destination="zrM-NL-AyQ" id="kmN-jd-1gr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68.115942028985515" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
